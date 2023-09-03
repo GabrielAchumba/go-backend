@@ -21,8 +21,8 @@ func (module *userModule) RegisterRoutes(rg *gin.RouterGroup) {
 	moduleRoute := rg.Group("/user")
 	serverHttp := rest.ServeHTTP
 
-	moduleRoute.POST("/login", serverHttp(module.controller.Login))
-	moduleRoute.POST("/register", serverHttp(module.controller.CreateUser))
+	moduleRoute.POST("/movielogin", serverHttp(module.controller.Login))
+	moduleRoute.POST("/movieregister", serverHttp(module.controller.CreateUser))
 	moduleRoute.GET("/getusers", serverHttp(module.controller.GetUsers))
 	moduleRoute.GET("/getuser/:lastname", serverHttp(module.controller.GetUser))
 	moduleRoute.POST("/update", serverHttp(module.controller.UpdateUser))
